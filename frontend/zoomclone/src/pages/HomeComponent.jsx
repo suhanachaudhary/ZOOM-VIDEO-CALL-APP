@@ -1,12 +1,13 @@
 import RestoreIcon from '@mui/icons-material/Restore';
 import { Button, IconButton, TextField } from '@mui/material';
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../App.css";
 import { AuthContext } from '../contexts/AuthContext';
-import WithAuth from '../utils/WithAuth';
+import withAuth from '../utils/withAuth';
 
 function HomeComponent() {
+
 
     let navigate = useNavigate();
     const [meetingCode, setMeetingCode] = useState("");
@@ -14,7 +15,7 @@ function HomeComponent() {
 
     const {addToUserHistory} = useContext(AuthContext);
     let handleJoinVideoCall = async () => {
-        // await addToUserHistory(meetingCode)
+        await addToUserHistory(meetingCode)
         navigate(`/${meetingCode}`)
     }
 
@@ -28,7 +29,7 @@ function HomeComponent() {
                     <h2>Apna Video Call</h2>
                 </div>
 
-                <div style={{ display: "flex", alignItems: "center",fontSize:"1.1rem",fontWeight:"500" }}>
+                <div style={{ display: "flex", alignItems: "center" }}>
                     <IconButton onClick={
                         () => {
                             navigate("/history")
@@ -41,10 +42,12 @@ function HomeComponent() {
                     <Button onClick={() => {
                         localStorage.removeItem("token")
                         navigate("/auth")
-                    }}  style={{fontSize:"1.1rem",fontWeight:"300" }}>
+                    }}>
                         Logout
                     </Button>
                 </div>
+
+
             </div>
 
 
@@ -52,6 +55,7 @@ function HomeComponent() {
                 <div className="leftPanel">
                     <div>
                         <h2>Providing Quality Video Call Just Like Quality Education</h2>
+                        <br></br>
 
                         <div style={{ display: 'flex', gap: "10px" }}>
 
@@ -62,7 +66,7 @@ function HomeComponent() {
                     </div>
                 </div>
                 <div className='rightPanel'>
-                    <img srcSet='/logo3.png' alt="" />
+                    <img srcSet='/mobile.png' alt="" />
                 </div>
             </div>
         </>
@@ -70,4 +74,4 @@ function HomeComponent() {
 }
 
 
-export default WithAuth(HomeComponent);
+export default withAuth(HomeComponent)

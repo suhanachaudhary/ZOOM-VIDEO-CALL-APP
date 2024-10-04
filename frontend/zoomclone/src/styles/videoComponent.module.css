@@ -1,0 +1,98 @@
+.meetVideoContainer {
+    position: relative;
+    height: 100vh;
+    background: rgb(1, 4, 48);
+}
+
+.meetUserVideo {
+    position: absolute;
+    bottom: 10vh;
+    height: 30vh;
+    width: auto;
+    left: 10px;
+    border-radius: 20px;
+}
+
+.buttonContainers {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+}
+
+.buttonContainers svg {
+    font-size: 3rem;
+}
+
+.conferenceView { 
+
+    display: flex;
+    
+    padding: 10px;
+    gap: 10px;
+}
+
+.conferenceView  video {
+    width: 40vw;
+    height: 20vh;
+    min-width: 30vw;
+    border-radius: 10px;
+}
+
+.chatRoom {
+    top:2px;
+    position: absolute;
+    height: 90vh;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    width: 30vw;
+    padding-inline: 20px;
+    padding-bottom: 4px;
+}
+
+.chatbtn{
+    margin-left: 4px !important;
+    height: 54px;
+}
+
+/* chat conatianer div */
+.chatContainer {
+    position: relative;
+    height: 100%;
+
+}
+
+.chattingDisplay{
+    overflow-y: scroll; /* Enables vertical scrolling */
+    overflow-x: hidden;
+    height: 70vh;
+}
+.chattingDisplay::-webkit-scrollbar {
+    width: 12px; /* Adjusts scrollbar width */
+}
+
+.chattingDisplay::-webkit-scrollbar-thumb {
+    background-color: darkgrey; /* Scrollbar thumb color */
+}
+
+.chattingDisplay::-webkit-scrollbar-track {
+    background-color: lightgrey; /* Scrollbar track color */
+}
+
+
+.chattingArea {
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

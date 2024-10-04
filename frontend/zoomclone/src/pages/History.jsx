@@ -2,14 +2,13 @@ import HomeIcon from '@mui/icons-material/Home';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 
 import { IconButton } from '@mui/material';
-
-
 export default function History() {
+
 
     const { getHistoryOfUser } = useContext(AuthContext);
 
@@ -50,12 +49,16 @@ export default function History() {
             }}>
                 <HomeIcon />
             </IconButton >
-            
             {
                 (meetings.length !== 0) ? meetings.map((e, i) => {
                     return (
+
                         <>
+
+
                             <Card key={i} variant="outlined">
+
+
                                 <CardContent>
                                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                                         Code: {e.meetingCode}
@@ -66,7 +69,11 @@ export default function History() {
                                     </Typography>
 
                                 </CardContent>
+
+
                             </Card>
+
+
                         </>
                     )
                 }) : <></>
