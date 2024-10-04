@@ -2,9 +2,9 @@ import axios from 'axios';
 import httpStatus from "http-status";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import server from "../environment";
 // Define the server base URL (you may want to adjust this to match your environment)
-const server = "http://localhost:8000";  // Replace with your actual server URL
+//const server = "http://localhost:8000";  // Replace with your actual server URL
 
 // Create the Axios instance
 const client = axios.create({
