@@ -4,7 +4,7 @@ import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../App.css";
 import { AuthContext } from '../contexts/AuthContext';
-import withAuth from '../utils/withAuth';
+import withAuth from '../utils/WithAuth';
 
 function HomeComponent() {
 
