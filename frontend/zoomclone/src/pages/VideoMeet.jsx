@@ -9,9 +9,10 @@ import VideocamOffIcon from '@mui/icons-material/VideocamOff';
 import { Badge, Button, IconButton, TextField } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import io from "socket.io-client";
-import server from '../environment';
+//import server from '../environment';
 import styles from "../styles/videoComponent.module.css";
 
+const server = "http://localhost:8000";
 const server_url = server;
 
 var connections = {};
